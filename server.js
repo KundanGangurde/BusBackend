@@ -12,9 +12,9 @@ app.use(cors());
 app.get("/",(req,res)=>{
    res.send("App is live now")
 })
-app.use("/api", require("../server/routes/trips") )
 app.use ("/api",require("../server/routes/stateDistrict"))
 app.use("/api", require("../server/routes/busOwner") )
+app.use("/api", require("../server/routes/trips") )
 app.listen(5000,()=>{
     console.log("listning to 5000")
 })
